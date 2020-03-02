@@ -5,4 +5,4 @@ const parkSchema = new Schema({
 
 });
 
-module.exports = mongoose.model("Tktk", parkSchema);
+module.exports = mongoose.model("Parks", parkSchema);

@@ -1,11 +1,11 @@
-const Tktk = require("../models/park");
+const Park = require("../models/park");
 
 module.exports = {
   index
 };
 
 function index(req, res) {
-  Tktk.find({}, function(err, parks) {
+  Park.find({}, function(err, parks) {
     if (err) return next(err);
     res.render("parks/index", { parks });
   });

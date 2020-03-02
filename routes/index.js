@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tktk Index' });
+  res.render('index', { title: 'Parks Index' });
 });
 
 module.exports = router;
