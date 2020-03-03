@@ -28,4 +28,8 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
+router.get('/views/parkviews/parks', function(req, res) {
+  res.redirect('/views/parkviews/parks');
+})
+
 module.exports = router;
