@@ -1,5 +1,11 @@
-var router = require('express').Router();
-var passport = require('passport');
+const express = require('express');
+const router = require('express').Router();
+const passport = require('passport');
+
+
+
+module.exports = router;
+
 
 // The root route renders our only view
 router.get('/', function(req, res) {
@@ -7,7 +13,7 @@ router.get('/', function(req, res) {
   // '/' = redirect
 });
 
-// Google OAuth login route
+//Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }
@@ -27,9 +33,3 @@ router.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
 });
-
-router.get('/views/parkviews/parks', function(req, res) {
-  res.redirect('/views/parkviews/parks');
-})
-
-module.exports = router;
