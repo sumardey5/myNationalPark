@@ -10,8 +10,7 @@ require('dotenv').config();
 require("./config/database");
 
 const indexRouter = require("./routes/index");
-const parksRouter = require("./routes/students");
-const usersRouter = require('./routes/users');
+const parksRouter = require("./routes/parks");
 
 const app = express();
 
@@ -27,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(session({
-  secret: 'National Pakrs',
+  secret: 'National Parks',
   resave: false,
   saveUninitialized: true
 }));
@@ -38,8 +37,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/students", parksRouter);
-app.use('/users', usersRouter);
+app.use("/parks", parksRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
