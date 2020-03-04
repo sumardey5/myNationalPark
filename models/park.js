@@ -12,7 +12,7 @@ const parkSchema = new mongoose.Schema({
     name: String,
     location: String,
     favorite: false,
-    comments: [commentSchema]
+    //comments: [commentSchema]
 }, {
     timestamps: true
 });

@@ -3,7 +3,7 @@ const Park = require('../models/park'); //defining the models
 module.exports = {
     index,
     onePark,
-    showComment
+    showComment,
 };
 
 function showComment(req, res) {

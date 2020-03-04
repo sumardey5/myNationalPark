@@ -6,4 +6,5 @@ router.get('/', parksCtrl.index);
 router.get('/parks', parksCtrl.onePark);
 router.get('/comments', parksCtrl.showComment);
 
+
 module.exports = router;
