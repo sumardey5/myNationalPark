@@ -2,10 +2,7 @@ const express = require('express');
 const router = require('express').Router();
 const passport = require('passport');
 
-
-
 module.exports = router;
-
 
 // The root route renders our only view
 router.get('/', function(req, res) {
