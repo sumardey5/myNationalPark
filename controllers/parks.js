@@ -1,3 +1,4 @@
+Learn more or give us feedback
 const Park = require('../models/park'); //defining the models
 
 module.exports = {
