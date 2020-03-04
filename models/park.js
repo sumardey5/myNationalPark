@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentSchema = new mongoose.Schema({
+    text: String
+}, {
+    timestamps: true
+});
+
 const parkSchema = new mongoose.Schema({
     //image
     name: String,
     location: String,
-    comment: {
-        type: String
-    },
-    favorite: false
-
+    favorite: false,
+    comments: [commentSchema]
 }, {
     timestamps: true
 });
