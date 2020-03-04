@@ -1,11 +1,10 @@
-Learn more or give us feedback
 const Park = require('../models/park'); //defining the models
 
 module.exports = {
     index,
     onePark,
     showComment
-}
+};
 
 function showComment(req, res) {
     Park.find({}, function(err, parks) {

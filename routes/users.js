@@ -1,9 +1,9 @@
-// const express = require('express');
-// const router = express.Router();
-// const profilesCtrl = require('../controllers/profiles');
+const express = require('express');
+const router = express.Router();
+const usersCtrl = require('../controllers/users');
 
-// router.get('/', profilesCtrl.index);
-// router.get('/favorites', profilesCtrl.showFav);
-// router.get('/trips', profilesCtrl.showList);
+router.get('/', usersCtrl.index);
+router.get('/favorites', usersCtrl.showFav);
+router.get('/trips', usersCtrl.showList);
 
-// module.exports = router;
+module.exports = router;
