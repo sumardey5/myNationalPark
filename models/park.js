@@ -10,13 +10,11 @@ const commentSchema = new Schema({
 
 const parkSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    year: {type: Number, default: function () {
-        return new Date().getFullYear();
-    }
-},  location: String,
+    year: {type: Number},
+    location: String,
     favorite: {type: Boolean, default: false},
     comments: [commentSchema],
-    activities: [{
+    parkActivity: [{
         type: Schema.Types.ObjectId,
         ref: 'Sport'
     }]

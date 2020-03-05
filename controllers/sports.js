@@ -18,6 +18,7 @@ function addToActivities(req, res) {
 }
 
 function create(req, res) {
+  
   Sport.create(req.body, function(err, sport) {
     res.redirect('/sports/new');
   });
@@ -27,6 +28,7 @@ function newSport(req, res) {
   Sport.find({}, function(err, sports) {
     res.render('sports/new', {
       name: 'Add Activity',
+      sports
     });
   });
 }

@@ -13,12 +13,10 @@
             <option><%= s.name %></option>
           <% }) %>
         </select>
-      </p>
+    </p>
       <form id="add-activity-form" action="/sports" method="POST">
         <label>Activity:</label>
         <input type="text" name="name">
-        <label>Difficulty:</label>
-        <input type="number" name="difficulty">
         <input type="submit" value="Add Activity">
       </form>
 </body>
