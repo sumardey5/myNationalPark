@@ -8,5 +8,19 @@
 </head>
 <body>
     <h1>You can add an activity to the list of activities on here</h1>
+    <p>Please first ensure that the activity is not in the dropdown
+        <select>
+          <% sports.forEach(function(s) { %>
+            <option><%= s.name %></option>
+          <% }) %>
+        </select>
+      </p>
+      <form id="add-activity-form" action="/sports" method="POST">
+        <label>Activity:</label>
+        <input type="text" name="name">
+        <label>Difficulty:</label>
+        <input type="number" name="difficulty">
+        <input type="submit" value="Add Activity">
+      </form>
 </body>
 </html>

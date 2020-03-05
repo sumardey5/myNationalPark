@@ -1,8 +1,29 @@
 const Sport = require('../models/sport');
 module.exports = {
   index,
+  new: newSport,
+  create
 };
+//New
+function create(req, res) {
+  Park.findById(req.params.id, function(err, park) {
+    park.comments.push(req.body);
+    park.save(function(err) {
+      res.redirect(`/parks/${park._id}`);
+    });
+  });
+}
 
+function newSport(req, res) {
+  Sport.find({}, function(err, sports) {
+    res.render('sports/new', {
+      name: 'Add Activity',
+      sports
+    });
+  });
+}
+
+//Old
 function index(req, res) {
   Sport.find({}, function(err, sports) {
       if (err) {
