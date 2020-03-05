@@ -21,9 +21,11 @@
               <td><%= p.name %></td>
               <td><%= p.year %></td>
               <td><a href="/parks/<%= p._id %>">Details</a></td>
+              <!--Below is for delete function-->
               <form action="/parks/<%= p._id %>?_method=DELETE" method="POST">
                 <td><button type="submit" class="btn btn-danger">X</button></td>
               </form>
+              <!--Above is for delete function-->
             </tr>
             <% }); %>
           </tbody>
