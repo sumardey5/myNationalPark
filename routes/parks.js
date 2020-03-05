@@ -3,8 +3,7 @@ const router = express.Router();
 const parksCtrl = require('../controllers/parks');
 
 router.get('/', parksCtrl.index);
-router.get('/parks', parksCtrl.onePark);
-router.get('/comments', parksCtrl.showComment);
-
+router.get('/individual', parksCtrl.onePark);
+router.get('/new', parksCtrl.showComment);
 
 module.exports = router;

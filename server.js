@@ -11,7 +11,7 @@ require("./config/database");
 
 const indexRouter = require("./routes/index");
 const parksRouter = require("./routes/parks");
-const usersRouter = require("./routes/users");
+const sportsRouter = require("./routes/sports");
 
 const app = express();
 
@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/parks", parksRouter);
-app.use("/users", usersRouter);
+app.use("/sports", sportsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

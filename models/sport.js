@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var userSchema = new mongoose.Schema({
+var sportsSchema = new mongoose.Schema({
   name: String,
   email: String,
   avatar: String,
@@ -7,4 +7,4 @@ var userSchema = new mongoose.Schema({
 }, {
   timestamps: true
 });
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Sport', sportsSchema);

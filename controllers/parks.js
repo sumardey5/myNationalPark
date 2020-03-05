@@ -11,7 +11,7 @@ function showComment(req, res) {
         if (err) {
             console.log(err);
         } else {
-        res.render('parks/comments', {parks, user: req.user});
+        res.render('parks/new', {parks, user: req.user});
         }
     });
 }
@@ -21,7 +21,7 @@ function onePark(req, res) {
         if (err) {
             console.log(err);
         } else {
-        res.render('parks/parks', {parks, user: req.user});
+        res.render('parks/individual', {parks, user: req.user});
         }
     });
 }
