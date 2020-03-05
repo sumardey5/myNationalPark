@@ -3,9 +3,7 @@ const Schema = mongoose.Schema;
 
 const sportsSchema = new mongoose.Schema({
   parkActivity: {
-    type: String,
-    required: true,
-    unique: true
+    type: String
   },
 }, {
   timestamps: true
