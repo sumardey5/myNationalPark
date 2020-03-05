@@ -18,8 +18,9 @@ function addToActivities(req, res) {
 }
 
 function create(req, res) {
-  
+  console.log(req.body)
   Sport.create(req.body, function(err, sport) {
+    console.log(sport)
     res.redirect('/sports/new');
   });
 }

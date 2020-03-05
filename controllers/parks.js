@@ -24,10 +24,10 @@ function create(req, res) {
 
 function show(req, res) {
     Park.findById(req.params.id)
-    .populate('activities').exec(function(err, park) {
-        Sport.find({_id: {$nin: park.activities}}, function(err, sports) {
+    .populate('parkActivity').exec(function(err, park) {
+        Sport.find({_id: {$nin: park.parkActivity}}, function(err, sports) {
             res.render('parks/individual', {
-                name: "Park details", park, sports
+                 park, sports
             });
         });
     });
