@@ -8,6 +8,23 @@
 </head>
 <body>
     <h1>This page will include a parks tracker with a link to go to park details</h1>
-    <button> <a href="/parks/individual">Individual Park Details</a></button>
+    <table id="list">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Year</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% parks.forEach(function(p) { %>
+            <tr>
+              <td><%= p.name %></td>
+              <td><%= p.year %></td>
+              <td><a href="/parks/<%= p._id %>">DETAILS</a></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
 </body>
 </html>

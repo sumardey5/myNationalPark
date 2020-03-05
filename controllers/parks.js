@@ -1,16 +1,43 @@
 const Park = require('../models/park'); //defining the models
+const Sport = require('../models/sport');
 
 module.exports = {
     index,
     onePark,
     showComment,
-    new: newPark
+    new: newPark,
+    show,
+    create
 };
+//New
+function create(req, res) {
+    req.body.favorite = !!req.body.favorite;
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
+    const park = new Park (req.body);
+    park.save(function(err) {
+        if (err) return res.redirect('/parks/new');
+        res.redirect(`/parks/${park._id}`);
+    });
+}
+
+function show(req, res) {
+    Park.findById(req.params.id)
+    .populate('activities').exec(function(err, park) {
+        Sport.find({_id: {$nin: park.activities}}, function(err, sports) {
+            res.render('parks/individual', {
+                name: "Park details", park, sports
+            });
+        });
+    });
+}
 
 function newPark(req, res) {
     res.render('parks/new', { title: 'Add Park' });
 }
 
+//Old news
 function showComment(req, res) {
     Park.find({}, function(err, parks) {
         if (err) {
