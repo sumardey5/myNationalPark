@@ -4,7 +4,12 @@ module.exports = {
     index,
     onePark,
     showComment,
+    new: newPark
 };
+
+function newPark(req, res) {
+    res.render('parks/new', { title: 'Add Park' });
+}
 
 function showComment(req, res) {
     Park.find({}, function(err, parks) {

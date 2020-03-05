@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 var sportsSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  avatar: String,
-  googleId: String
+  name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+    difficulty: String
 }, {
   timestamps: true
 });
