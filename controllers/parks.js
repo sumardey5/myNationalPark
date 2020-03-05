@@ -7,9 +7,24 @@ module.exports = {
     showComment,
     new: newPark,
     show,
-    create
+    create,
+    delete: deleteOne
 };
 //New
+
+//for delete
+function deleteOne(req, res) {
+    Park.findByIdAndDelete(req.params.id, function(err, parks) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('deleting: ' + parks);
+        }
+    })
+    res.redirect('/parks')
+}
+
+
 function create(req, res) {
     req.body.favorite = !!req.body.favorite;
     for (let key in req.body) {
