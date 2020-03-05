@@ -21,7 +21,7 @@
   
     <div>Activities:</div>
     <ul>
-      <%- park.activities.map(p => 
+      <%- park.sports.map(p => 
         `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
       ).join('') %>
     </ul>
