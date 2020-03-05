@@ -16,7 +16,7 @@ const parkSchema = new mongoose.Schema({
 },  location: String,
     favorite: {type: Boolean, default: false},
     comments: [commentSchema],
-    sports: [{
+    activities: [{
         type: Schema.Types.ObjectId,
         ref: 'Sport'
     }]

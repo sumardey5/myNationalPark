@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>This will be the park details page where a user can add a review and activity  </h1>
-    section id="show-page">
   <section id="show-page">
     <div>Name: </div>
     <div><%= park.name %></div>
@@ -21,13 +20,13 @@
   
     <div>Activities:</div>
     <ul>
-      <%- park.sports.map(p => 
+      <%- park.activities.map(p => 
         `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
       ).join('') %>
     </ul>
   </section>
   
-  <form id="add-per-to-activity" action="/parks/<%= park._id%>/sports" method="POST">
+  <form id="add-per-to-activities" action="/parks/<%= park._id%>/sports" method="POST">
     <select name="sportId">
       <%- sports.map(p => 
         `<option value="${p._id}">${p.name}</option>`
