@@ -16,7 +16,7 @@
 
 ## Wireframe:
 
-![Wireframe](https://imgur.com/U96BqSQg.jpg)
+![Wireframe](https://i.imgur.com/U96BqSQ.jpg)
 
 ## ERD:
 
