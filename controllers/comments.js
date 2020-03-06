@@ -2,8 +2,16 @@ const Park = require('../models/park');
 
 module.exports = {
     create,
-    update
+    update,
+    edit
 };
+
+function edit (req, res) {
+    Park.findById(req. params.id, function (err, park) {
+        if (!park.user.equals(req.user._id)) return res.redirect('/parks');
+        res.render('parks', {park});
+    })
+}
 
 function update (req, res) {
     Park.findByIdAndUpdate(req.params.id, req.body, function(err, park) {
