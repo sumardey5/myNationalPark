@@ -1,4 +1,4 @@
-const parks = [
+onst parks = [
     {
         parkName: "Acadia",
         parkLocale: "Maine"

@@ -82,4 +82,3 @@ function index(req, res) {
         }
     });
 }
-
