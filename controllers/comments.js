@@ -1,8 +1,15 @@
 const Park = require('../models/park');
 
 module.exports = {
-    create
+    create,
+    update
 };
+
+function update (req, res) {
+    Park.findByIdAndUpdate(req.params.id, req.body, function(err, park) {
+        res.redirect('/comments');
+    });
+}
 
 function create(req, res) {
     Park.findById(req.params.id, function(err, park) {

@@ -12,6 +12,6 @@ router.get('/:id', parksCtrl.show);
 router.post('/', parksCtrl.create);
 
 router.delete('/:id', parksCtrl.delete); //delete
-router.put('/:id', parksCtrl.update); //update
+// router.put('/:id', parksCtrl.update); //update
 
 module.exports = router;

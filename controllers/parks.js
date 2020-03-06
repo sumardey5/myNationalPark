@@ -9,15 +9,15 @@ module.exports = {
     show,
     create,
     delete: deleteOne,
-    update
+    // update
 };
 //New
 
-function update (req, res) {
-    Park.findByIdAndUpdate(req.params.id, req.body, function(err, park) {
-        res.redirect('/comments');
-    });
-}
+// function update (req, res) {
+//     Park.findByIdAndUpdate(req.params.id, req.body, function(err, park) {
+//         res.redirect('/comments');
+//     });
+// }
 
 //for delete
 function deleteOne(req, res) {
