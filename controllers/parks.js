@@ -15,7 +15,7 @@ module.exports = {
 
 function update (req, res) {
     Park.findByIdAndUpdate(req.params.id, req.body, function(err, park) {
-        res.redirect('/parks');
+        res.redirect('/comments');
     });
 }
 
