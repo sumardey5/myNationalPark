@@ -36,6 +36,7 @@ function deleteOne(req, res) {
 
 function create(req, res) {
     req.body.favorite = !!req.body.favorite;
+    req.body.userWhoCreated = req.user._id;
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
@@ -82,7 +83,7 @@ function onePark(req, res) {
 }
 
 function index(req, res) {
-    Park.find({}, function(err, parks) {
+    Park.find({userWhoCreated: req.user._id}, function(err, parks) {
         if (err) {
             console.log(err);
         } else {

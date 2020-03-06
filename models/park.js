@@ -14,10 +14,8 @@ const parkSchema = new mongoose.Schema({
     location: String,
     favorite: {type: Boolean, default: false},
     comments: [commentSchema],
-    parkActivity: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Sport'
-    }]
+    userWhoCreated: {type: Schema.Types.ObjectId, ref: 'User'},
+    parkActivity: [{type: Schema.Types.ObjectId, ref: 'Sport'}]
 }, {
     timestamps: true
 });
