@@ -16,16 +16,16 @@
 
 ## Wireframe:
 
-![Wireframe](https://imgur.com/U96BqSQg)
+![Wireframe](https://imgur.com/U96BqSQg.jpg)
 
 ## ERD:
 
-![Wireframe](https://imgur.com/FubU8Sd)
+![Wireframe](https://imgur.com/FubU8Sd.jpg)
 
 ## Finished App:
 
-![Wireframe](https://imgur.com/nbCQHKK)
-![Wireframe](https://imgur.com/o4PMnO5)
+![Wireframe](https://imgur.com/nbCQHKK.jpg)
+![Wireframe](https://imgur.com/o4PMnO5.jpg)
 
 ## Technology Implemented:
 
@@ -42,11 +42,12 @@
 
 ## Pseudocode:
 
-* Search for a cocktail by entering its name into a search bar.
-* Click a button to save a cocktail onto a "Favorites" page.
-* Click a button to delete a cocktail from a "Favorites" page.
-* Add notes to cocktail.
-* Check box to keep track of whether you have tried a cocktail.
+* Add a National Park to the list.
+* Comment on that National Park.
+* Add an activity to the list of activities.
+* Add an activity to a specific park.
+* Delete a specific park from the list.
+* "Favorite" and "Unfavorite" a National Park.
 
 # User Experience:
 
