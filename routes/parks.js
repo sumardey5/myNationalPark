@@ -10,6 +10,7 @@ router.get('/', parksCtrl.index);
 router.get('/new', parksCtrl.new);
 router.get('/:id', parksCtrl.show);
 router.post('/', parksCtrl.create);
+
 router.delete('/:id', parksCtrl.delete); //delete
 
 module.exports = router;
