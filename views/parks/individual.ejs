@@ -42,12 +42,7 @@
     <input type="submit" value="Add Comment">
   </form>
 
-<!-- update -->
-  <form action="/comments/<%= park._id %>?_method=PUT" method="POST">
-    <input name="text" value="<%= park.text %>">
-    <button type="submit">UPDATE COMMENT</button>
-  </form>
-  <!-- update -->
+
 
   <% if (park.comments.length) { %>
     <table>
