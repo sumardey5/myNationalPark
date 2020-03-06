@@ -57,14 +57,13 @@
 
 ## User Persona #2:
 
-* Walter and Jesse are RV-ing to all National Parks in the continental US, they want to be able to keep track of all parks they've been to in order to come back to their favorites next year.
+* Walter and Jesse are RV-ing to all National Parks in the continental US, they want to be able to add comments to all the parks they've gone to, in order see which ones they want to come back to again.
 
 ## Minimum Viable Product:
 
 * As a user, I should be able to add National Parks to my list and view my list of parks. 
 * As a user, I should be able to write a comment for a park.
 * As a user, I should be able to add an activity and list it in a park.
-
 * As a user, I should be able to delete a park from my list.
 * As a user, I should be able to update whether I "favorite" a park or not. 
 
