@@ -41,6 +41,11 @@
     </select>
     <input type="submit" value="Add Comment">
   </form>
+
+  <form action="/parks/<%= park._id %>?_method=PUT" method="POST">
+    <input name="text" value="<%= park.text %>">
+    <button type="submit">UPDATE COMMENT</button>
+  </form>
   
   <% if (park.comments.length) { %>
     <table>

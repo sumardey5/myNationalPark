@@ -8,9 +8,16 @@ module.exports = {
     new: newPark,
     show,
     create,
-    delete: deleteOne
+    delete: deleteOne,
+    update
 };
 //New
+
+function update (req, res) {
+    Park.findByIdAndUpdate(req.params.id, req.body, function(err, park) {
+        res.redirect('/parks');
+    });
+}
 
 //for delete
 function deleteOne(req, res) {
@@ -20,8 +27,10 @@ function deleteOne(req, res) {
         } else {
             console.log('deleting: ' + parks);
         }
+        console.log(parks);
+        res.redirect('/parks');
     })
-    res.redirect('/parks')
+
 }
 
 

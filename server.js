@@ -38,14 +38,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(methodOverride('_method')); //delete
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/parks", parksRouter);
 app.use("/sports", sportsRouter);
 app.use("/", commentsRouter);
-
-app.use(methodOverride('_method')); //delete
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
